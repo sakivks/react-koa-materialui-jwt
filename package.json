@@ -1,0 +1,36 @@
+{
+  "name": "real-time-monitoring",
+  "version": "0.5.0",
+  "description": "real time monitoring and calibration service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.production.config.js",
+    "watch": "nodemon --watch src --exec npm run build",
+    "start": "node index.js"
+  },
+  "author": "Vikas [R625638]",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-env": "1.6.0",
+    "babel-register": "6.26.0",
+    "dotenv": "4.0.0",
+    "koa": "2.3.0",
+    "koa-logger": "3.0.1",
+    "koa-router": "7.2.1",
+    "koa-static": "4.0.1",
+    "material-ui": "0.19.0",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "react-tap-event-plugin": "2.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-react-hmre": "1.1.1",
+    "babel-preset-stage-0": "6.24.1",
+    "koa-webpack": "1.0.0",
+    "webpack": "3.5.5"
+  }
+}
