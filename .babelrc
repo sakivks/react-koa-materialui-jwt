@@ -8,11 +8,7 @@
         }
       }
     ],
-    "react", "stage-0"
-  ],
-  "env": {
-    "development": {
-      "presets": ["react-hmre"]
-    }
-  }
+    "react",
+    "stage-0"
+  ]
 }

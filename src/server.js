@@ -3,6 +3,7 @@ const path = require("path");
 const Koa = require("koa");
 const logger = require("koa-logger");
 const serve = require('koa-static');
+const bodyParser = require('koa-bodyparser');
 const app = new Koa();
 
 //++++++++++ Webpack dev middleware +++++++++++++//
@@ -13,8 +14,10 @@ if (process.env.NODE_ENV === "development" || process.env.NODE_ENV === "dev") {
 }
 //++++++++++++++++++++++++++++++++++++++++++++++//
 
+app.keys = ['alittleretsec'];
 app.use(logger());
 app.use(serve('public'));
+app.use(bodyParser());
 
 //+++++++++++++++ Code Logic ++++++++++++++++++//
 const middlewareProcesses = require("./middlewareProcesses");
