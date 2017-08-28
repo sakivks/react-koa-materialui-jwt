@@ -16,7 +16,6 @@ if (process.env.NODE_ENV === "development" || process.env.NODE_ENV === "dev") {
 
 app.keys = ['alittleretsec'];
 app.use(logger());
-app.use(serve('public'));
 app.use(bodyParser());
 
 //+++++++++++++++ Code Logic ++++++++++++++++++//
@@ -27,6 +26,10 @@ app.use(middlewareProcesses.routes());
 app.use(middlewareProcesses.allowedMethods());
 app.use(coreRoutes.routes());
 app.use(coreRoutes.allowedMethods());
+//++++++++++++++++++++++++++++++++++++++++++++++//
+
+app.use(serve('public'));
+
 //++++++++++++++++++++++++++++++++++++++++++++++//
 
 app.listen(process.env.PORT || process.argv[2] || 4000);
