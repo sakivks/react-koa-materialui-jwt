@@ -14,11 +14,11 @@ injectTapEventPlugin();
 ReactDOM.render(
   <Theme >
     <div>
-      <App title="EDA Real-time Monitoring Calibration Service"  action="Logout" actionDisabled={false}/>
+      <App title="XYZ"  action="Logout" actionDisabled={false}/>
       {/*<FileExposer file="Market Cap Band" />*/}
-      <FileExposer file="Market Cap Band"/>
-      <FileExposer file="Tier thresholds"/>
-      <FileExposer file="Overrides"/>
+      <FileExposer file="ABC"/>
+      <FileExposer file="MNO"/>
+      <FileExposer file="PQR"/>
       <LogViewer />
     </div>
   </Theme>,

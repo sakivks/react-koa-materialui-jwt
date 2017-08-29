@@ -1,7 +1,7 @@
 const util = {
 
   secret: "alittleretsec",
-  authCookieExpiresIn: "10m",
+  authCookieExpiresIn: "1h",
 
   verifyAuth(credential) {
     return new Promise((resolve, reject) => {

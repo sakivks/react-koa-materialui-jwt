@@ -13,7 +13,7 @@ injectTapEventPlugin();
 ReactDOM.render(
   <Main darkTheme={true}>
     <div>
-      <App title="EDA Real-time Monitoring Calibration Service" action=" " actionDisabled />
+      <App title="XYZ" action=" " actionDisabled />
       <LoginDialog open />
     </div>
   </Main>,
