@@ -73,8 +73,7 @@ export default class LoginDialog extends React.Component {
           this.setState({
             open: false
           });
-          console.log("User authenticated : " + resp.data.user);
-          window.location.replace("/home.html");
+          window.location.replace("/home");
         } else {
           this.setState({
             errorMessage: resp.data.info

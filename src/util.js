@@ -1,10 +1,7 @@
 const util = {
-  square(x) {
-    return x * x;
-  },
 
   secret: "alittleretsec",
-  authCookieExpiresIn: "2m",
+  authCookieExpiresIn: "10m",
 
   verifyAuth(credential) {
     return new Promise((resolve, reject) => {

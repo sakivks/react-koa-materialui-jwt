@@ -9,7 +9,7 @@ const styles = { container: {} };
 // const muiTheme = getMuiTheme({ palette: { accent1Color: amber900 } });
 
 const Theme = props =>
-  <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+  <MuiThemeProvider muiTheme={props.darkTheme ? getMuiTheme(darkBaseTheme):null}>
     <div style={styles.container}>
       <div>
         {props.children}

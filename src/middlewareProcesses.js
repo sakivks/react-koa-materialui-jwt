@@ -35,9 +35,8 @@ router.post("/login", async (ctx, next) => {
     .verifyAuth(ctx.request.body)
     .then(user => {
       const token = jwt.sign({ username: ctx.request.body.username }, util.secret, { expiresIn: util.authCookieExpiresIn });
-      ctx.body = { success: true, auth: token, user };
-      ctx.cookies.set("auth", token, { signed: true });
-      ctx.cookies.set("user.name", user, { signed: true });
+      ctx.body = { success: true, auth: token, store: { user } };
+      ctx.cookies.set("auth", token, { signed: true, httpOnly:false });
     })
     .then(null, err => {
       ctx.body = {
